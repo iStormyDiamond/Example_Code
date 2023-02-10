@@ -1,0 +1,5 @@
+Log.w("##","convertFromBaseToBase ${convertFromBaseToBase("258",10,16)}")
+
+fun convertFromBaseToBase(str: String, fromBase: Int, toBase: Int): String? {
+   return Integer.toString(str.toInt(fromBase), toBase)
+}

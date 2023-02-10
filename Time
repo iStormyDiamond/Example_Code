@@ -1,0 +1,5 @@
+import java.text.SimpleDateFormat
+
+var timE = SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime())
+
+https://developer.android.com/reference/kotlin/java/text/SimpleDateFormat

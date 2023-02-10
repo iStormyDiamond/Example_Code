@@ -1,0 +1,13 @@
+var groupHTH = findViewById<RadioGroup>(R.id.yhjgg)
+
+var WCilck = "" 
+groupHTH.setOnCheckedChangeListener { group, checkedId ->
+   when(checkedId){
+       R.id.radioHTH->{
+           WCilck="A"
+       }
+       R.id.radioHoTH ->{
+           WCilck="B"
+       }
+   }
+}

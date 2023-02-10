@@ -1,0 +1,16 @@
+val ProcrssNameList = arrayListOf<String>()
+
+val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ProcrssNameList)
+defect1.adapter = adapter
+
+defect1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+   override fun onItemSelected(
+       parent: AdapterView<*>,
+       view: View,
+       position: Int,
+       id: Long
+   ) { CRITERIA_01 = ProcrssNoList[position].toInt()
+       (parent.getChildAt(0) as TextView).textSize = 18f
+   }
+   override fun onNothingSelected(parent: AdapterView<*>) {}
+}

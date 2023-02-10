@@ -1,10 +1,10 @@
 private static final String LOG = "DEBUG";
-    private static String ip = "192.168.0.247";
-    private static String port = "1433";
+    private static String ip = "xxx.xxx.x.xxx";
+    private static String port = "xxxx";
     private static String classs = "net.sourceforge.jtds.jdbc.Driver";
-    private static String db = "IMAJ-DB";
-    private static String un = "sa";
-    private static String password = "imaj12.c";
+    private static String db = "xxxxxx";
+    private static String un = "xx";
+    private static String password = "xxxxx";
 
 public  void Test_Connect_SQL_Server(){
         Connection conn = null;

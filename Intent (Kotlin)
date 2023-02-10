@@ -1,0 +1,9 @@
+//send
+val intent = Intent(this@LARActivity, LARActivity::class.java)
+finish()
+intent.putExtra("step", IS_OP)
+startActivity(intent)
+overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
+//recieve
+val step = getIntent().getExtras()!!.getString("step")

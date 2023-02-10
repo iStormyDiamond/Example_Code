@@ -16,11 +16,11 @@ import java.util.*
 //import jdk.nashorn.internal.runtime.ECMAErrors.getMessage
 
 class ConnectionClass {
-   var ip = "192.168.0.247:1433"
+   var ip = "xxx.xxx.x.xxx:xxx"
    var classs = "net.sourceforge.jtds.jdbc.Driver"  //*********************
-   var db = "IMAJ-DB"
-   var un = "sa"
-   var password = "imaj12.c"
+   var db = "xxxxxx"
+   var un = "xx"
+   var password = "xxxxxx"
 
    //@SuppressLint("NewApi")
    fun CONN(): Connection? {

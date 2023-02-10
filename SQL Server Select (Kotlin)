@@ -1,0 +1,20 @@
+var connectionClass: ConnectionClassDev? = null
+
+fun select (){
+        connectionClass = ConnectionClass()
+        try {
+            val conName: Connection? = connectionClass!!.CONN()
+            if (conName == null) {
+            } else {
+                NameArray.clear()  // NameArray is array type
+
+                val queryName = "select * from tcn_location"
+                val rsName = conName.createStatement().executeQuery(queryName)
+                while(rsName.next()){
+                    NameArray.add("${rsName.getString("tcn_location_description")}")
+                }
+            }
+        }
+        catch (ex: Exception) { Log.w("#", "ERROR INSERT bag_logtime") }
+
+    }

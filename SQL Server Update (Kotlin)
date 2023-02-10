@@ -1,0 +1,17 @@
+var connectionClass: ConnectionClass? = null
+
+
+fun UPDATE (){
+        connectionClass = ConnectionClass()
+        try {
+            val con3 = connectionClass!!.CONN()
+
+            val queryINSERT = "UPDATE bag_logtime set time_stop = '$time_stop' , Location_no = $Location , total_minute = $total_min , Date_record_stop = '$Date_record_stop' " +
+                    "where job_bag = '$sk1_bag' and time_stop = '0'"
+            val stmtINSERT: Statement = con3!!.createStatement()
+            stmtINSERT.executeUpdate(queryINSERT)
+        } catch (se: SQLException) {
+            Log.w("#", "ERROERW INSERT sk4_bag_transaction")
+        }
+
+    }

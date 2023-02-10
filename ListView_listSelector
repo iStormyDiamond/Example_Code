@@ -1,0 +1,2 @@
+// add to ListView Layout .xml
+android:listSelector="@color/design_default_color_secondary_variant"

@@ -1,0 +1,4 @@
+app:autoSizeMaxTextSize="100sp"
+app:autoSizeMinTextSize="16sp"
+app:autoSizeStepGranularity="1sp"
+app:autoSizeTextType="uniform"

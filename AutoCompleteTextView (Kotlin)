@@ -1,0 +1,4 @@
+var editTextTextPersonName_tree = findViewById<AutoCompleteTextView>(R.id.editTextTextPersonName)
+val arrayAdapterGuildItemCode = ArrayAdapter<String>(this@MWC_Activity,android.R.layout.simple_list_item_1,Tree_No_List)
+editTextTextPersonName_tree.threshold = 1
+editTextTextPersonName_tree.setAdapter(arrayAdapterGuildItemCode)

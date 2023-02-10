@@ -1,0 +1,36 @@
+val myListAdapter = MyListAdapter(this,Recommend_List_CastingMachine,Recommend_List_Position,Recommend_List_OvenTemp,Recommend_List_CastingTemp)
+val listView = findViewById<ListView>(R.id.Recommend_List)
+listView.adapter = myListAdapter
+listView.setOnItemClickListener(){adapterView, view, position, id ->
+   Machine_Init = Recommend_List_CastingMachine[position]
+   Position_Init = Recommend_List_Position[position]
+   SetColorInit()
+
+}
+
+
+//MyListAdapter 
+class MyListAdapter (private val context: Activity,
+                    private val Casting_machine: ArrayList<String>,
+                    private val Position: ArrayList<String>,
+                    private val Oven_Temp: ArrayList<String>,
+                    private val Casting_Temp: ArrayList<String>)
+   : ArrayAdapter<String>(context, R.layout.custom_list, Casting_machine) {
+
+   override fun getView(position: Int, view: View?, parent: ViewGroup): View {
+       val inflater = context.layoutInflater
+       val rowView = inflater.inflate(R.layout.custom_list, null, true)
+
+       val Casting_machine_Text = rowView.findViewById(R.id.textView19) as TextView
+       val Position_Text = rowView.findViewById(R.id.textView25) as TextView
+       val Oven_Temp_Text = rowView.findViewById(R.id.textView27) as TextView
+       val Casting_Temp_Text = rowView.findViewById(R.id.textView28) as TextView
+
+       Casting_machine_Text.text = Casting_machine[position]
+       Position_Text.text = Position[position]
+       Oven_Temp_Text.text = Oven_Temp[position]
+       Casting_Temp_Text.text = Casting_Temp[position]
+
+       return rowView
+   }
+}

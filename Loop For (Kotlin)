@@ -1,0 +1,6 @@
+for (i in userName.indices) {
+                    if (userName[i].equals(name)) {
+                        index = i
+                        break
+                    }
+                }

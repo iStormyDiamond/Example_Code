@@ -1,0 +1,14 @@
+var connectionClass: ConnectionClass? = null
+
+fun INSERT(){
+        connectionClass = ConnectionClass()
+        try {
+            val con3 = connectionClass!!.CONN()
+            val queryINSERT = "INSERT INTO bag_logtime (job_bag,ItemCode,Location_no)VALUES('$sk1_bag','$itemCode','$Location')"
+            val stmtINSERT: Statement = con3!!.createStatement()
+            stmtINSERT.executeUpdate(queryINSERT)
+        } catch (se: SQLException) {
+            Log.w("#", "ERROR INSERT bag_logtime")
+        }
+
+    }

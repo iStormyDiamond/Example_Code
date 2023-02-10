@@ -1,0 +1,6 @@
+val listView =  findViewById<ListView>(R.id.listview1)
+val adp : ArrayAdapter<String> = ArrayAdapter(this@JournalActivity,android.R.layout.simple_list_item_1,Journal_List)
+                listView.adapter = adp
+                listView.onItemClickListener= AdapterView.OnItemClickListener { parent, view, position, id ->
+
+                }

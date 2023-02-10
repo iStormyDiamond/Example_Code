@@ -1,0 +1,51 @@
+private static final String LOG = "DEBUG";
+    private static String ip = "192.168.0.247";
+    private static String port = "1433";
+    private static String classs = "net.sourceforge.jtds.jdbc.Driver";
+    private static String db = "IMAJ-DB";
+    private static String un = "sa";
+    private static String password = "imaj12.c";
+
+public  void Test_Connect_SQL_Server(){
+        Connection conn = null;
+        String ConnURL = null;
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        try {
+            Class.forName(classs);
+            ConnURL = "jdbc:jtds:sqlserver://" + ip +":"+port+";"
+                    + "databaseName=" + db + ";user=" + un + ";password="
+                    + password + ";";
+            conn = DriverManager.getConnection(ConnURL);
+            try (Connection con = DriverManager.getConnection(ConnURL); Statement stmt = con.createStatement();) {
+
+                //*Select
+                /*
+                String SQL = "select * from mas_user where EMP_CODE = '21034477'";
+                ResultSet rs = stmt.executeQuery(SQL);
+                while (rs.next()) {
+                    Log.w("#", "USER_NAME  " + rs.getString("USER_NAME"));
+                    //System.out.println(rs.getString("FirstName") + " " + rs.getString("LastName"));
+                }
+                */
+
+                //Insert
+                /*
+                String SQL = "INSERT INTO uhf_test_ (text_)VALUES('Swiss')";
+                stmt.executeUpdate(SQL);
+                */
+
+                //Update
+                /*
+                String SQL = "UPDATE uhf_test_ set text_ = 'Bali' where text_ = 'Swiss'";
+                stmt.executeUpdate(SQL);
+                */
+
+            }
+            // Handle any errors that may have occurred.
+            catch (SQLException e) { e.printStackTrace(); }
+            
+        } catch (SQLException e) { Log.d(LOG, e.getMessage());
+        } catch (ClassNotFoundException e) { Log.d(LOG, e.getMessage()); }
+        //return conn;
+    }

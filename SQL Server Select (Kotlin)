@@ -1,4 +1,4 @@
-var connectionClass: ConnectionClassDev? = null
+var connectionClass: ConnectionClass? = null
 
 fun select (){
         connectionClass = ConnectionClass()

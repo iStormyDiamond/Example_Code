@@ -1,0 +1,16 @@
+var mHandlerClock: Handler? = null
+
+//OnCreate
+mHandlerClock = Handler()
+m_RunnableClock.run()
+
+//function
+private val m_RunnableClock: Runnable = object : Runnable {
+   override fun run() {
+       this@LongActivity.mHandlerClock!!.postDelayed(this, 1000)
+       var textView76 = findViewById<TextView>(R.id.textView76Long)
+       textView76.setText("${SimpleDateFormat("HH:mm:ss").format(Calendar.getInstance().getTime())}")
+
+   }
+}
+

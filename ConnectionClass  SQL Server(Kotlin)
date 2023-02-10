@@ -1,0 +1,53 @@
+//
+implementation files('libs\\jtds-1.3.1.jar')
+
+
+
+
+import android.R.attr
+import android.annotation.SuppressLint
+import android.os.StrictMode
+import android.util.Log
+import android.widget.Toast
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.SQLException
+import java.util.*
+//import jdk.nashorn.internal.runtime.ECMAErrors.getMessage
+
+class ConnectionClass {
+   var ip = "192.168.0.247:1433"
+   var classs = "net.sourceforge.jtds.jdbc.Driver"  //*********************
+   var db = "IMAJ-DB"
+   var un = "sa"
+   var password = "imaj12.c"
+
+   //@SuppressLint("NewApi")
+   fun CONN(): Connection? {
+       var policy =StrictMode.ThreadPolicy.Builder().permitAll().build()
+       StrictMode.setThreadPolicy(policy)
+       var connString : String? = null
+       var conn : Connection? = null
+       try {
+           Class.forName(class)
+           connString = "jdbc:jtds:sqlserver://$ip;databaseName=$db;user=$un;password=$password;"
+           conn = DriverManager.getConnection(connString)
+           //Log.w("##","work4")
+       } catch (ex: SQLException) {
+           // handle any errors
+           //Log.w("##","SQLException")
+           ex.printStackTrace()
+       } catch (ex: Exception) {
+           //Log.w("##","Exception")
+           // handle any errors
+var connectionClass: ConnectionClass? = null
+
+
+connectionClass = ConnectionClass()
+           ex.printStackTrace()
+       }
+       return conn
+   }
+}
+
+

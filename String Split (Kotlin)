@@ -1,0 +1,4 @@
+private fun ModifyString(Str: String) {
+   val mString = Str!!.split(",").toTypedArray()
+   KEY_WORD_List.addAll(mString)
+}

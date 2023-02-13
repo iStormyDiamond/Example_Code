@@ -1,0 +1,2 @@
+Window window = this.getWindow();
+window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

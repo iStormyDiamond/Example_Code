@@ -12,3 +12,5 @@ https://www.javatpoint.com/android-tutorial
 Link Example Code (Kotlin)
 
 https://www.w3schools.com/kotlin/index.php
+
+https://www.w3schools.blog/android-tutorial

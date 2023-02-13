@@ -6,6 +6,7 @@ https://www.tutorialspoint.com/android/index.htm
 
 https://www.javatpoint.com/android-tutorial
 
+https://www.w3schools.blog/android-tutorial
 
 
 
@@ -13,4 +14,4 @@ Link Example Code (Kotlin)
 
 https://www.w3schools.com/kotlin/index.php
 
-https://www.w3schools.blog/android-tutorial
+
